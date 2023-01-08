@@ -89,18 +89,47 @@ var upperCasedCharacters = [
 ];
 
 // Password gen values 
-// var userInput = getUserInput.userInput;
-// Function to prompt user for password options
+
+
+// Function to query user for length and character types of password [console.logs to be deleted]
 function getPasswordOptions() {
+  var passwordLength = prompt("Please enter the desired length of password:");
+  let num = Number(passwordLength);
+  if (num > 10 && num < 64) {
+    console.log("User has opted for a password length of: " + num);
+  } else {
+    return alert("Password must be between 10 and 64 characters");
+  }
+  var lowerCase = confirm("Do you wish to include lowercase characters?");
+  if (lowerCase) { 
+    console.log("User has opted to include lower case characters");
+  } else {
+      console.log("User has opted NOT to include lower case characters");
+    }
+    var upperCase = confirm("Do you wish to include upper case characters?")
+    if (upperCase) {
+      console.log("User has opted to include upper case characters");
+    } else {
+      console.log("User has opted NOT to include upper case characters");
+    }
+    var numerics = confirm("Do you wish to include numerical characters?")
+    if (numerics) {
+      console.log("User has opted to include numerical characters");
+    } else {
+      console.log("User has opted NOT to include numerical characters");
+    }
+    var specialCharacters = confirm("Do you wish to include special characters?");
+    if (specialCharacters) {
+      console.log("User has opted to include special characters");
+    } else {
+      console.log("User has opted NOT to include special characters");
+    }
+};
 
-}
 
-function getUserInput() {
-  var passwordLength = prompt("Please enter your input:");
-  return console.log("User requested a password character length of: " + passwordLength);
-}
 // call function 
-getUserInput()
+getPasswordOptions();
+
 // Function for getting a random element from an array
 function getRandom(arr) {
 
