@@ -1,79 +1,30 @@
-# Module 5 Challenge: Password Generator
+ Password Generator using Javascript (Bootcamp Challenge 5)
 
-## Overview
+## Description 
+This project is a JavaScript password generator allowing a user to create a randomly-generated password based on specified options. The user can choose the length of the password and which types of characters to include (lowercase letters, uppercase letters, numbers, special characters). The program generates a password by combining random characters from the chosen character arrays. The generated password is intended to be used as a login password to increase security.
 
-This week’s challenge requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
+### How to use this program
 
-The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
+* Go to the website page, and respond to the prompts. 
+* Now click the 'Generate Password' button, and your password will appear tailored to your stated preferences. 
+* Link: 
 
-## Instructions
+Here is a screenshot of my project. 
 
-The following image shows the web application's appearance and functionality:
-
-![password generator demo](./assets/05-javascript-challenge-demo.png)
-
-
-* Generate a password when the button is clicked
-  * Present a series of prompts for password criteria
-    * Length of password
-      * At least 10 characters but no more than 64.
-    * Character types
-      * Lowercase
-      * Uppercase
-      * Numeric
-      * Special characters ($@%&*, etc)
-  * Code should validate for each input and at least one character type should be selected
-  * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
-
-## Grading Requirements
-
-This challenge is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the above acceptance criteria plus the following:
-
-  * The challenge should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the challenge instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality README file with description, screenshot, and link to deployed application.
+![Image of Password Generator ](./assets/Project-Image.png)
 
 
-## Review
+### What I have learnt 
 
-You are required to submit the following for review:
+* I have learnt how to work with arrays and strings in JavaScript
+* I utilised the `Math.floor` and `Math.random` functions to generate random numbers
+* I have learnt how to use loops and conditional statemenents to control the flow of execution 
+* I have learnt about defining and calling functions 
+* I have learnt about returning values from a function using an object 
+* I have learnt to use the DOM API to select and manipulate web-page elements. 
 
-* The URL of the deployed application.
 
-* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+## Credits 
 
----
-
-© 2022 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+* https://www.w3schools.com/jsref/jsref_floor.asp
+* https://www.w3schools.com/jsref/jsref_number.asp

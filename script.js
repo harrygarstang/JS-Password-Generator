@@ -88,9 +88,6 @@ var upperCasedCharacters = [
   'Z'
 ];
 
-// Password gen values 
-
-
 // Function to query user for length and character types of password [console.logs to be deleted]
 function getPasswordOptions() {
   var passwordLength = prompt("Please enter the desired length of password:");
@@ -105,7 +102,7 @@ function getPasswordOptions() {
   var numerics = confirm("Do you wish to include numerical characters?")
   var specialCharactersInput = confirm("Do you wish to include special characters?");
 
-  return {
+  return { // Returning the values that the user has picked (either true or false) in the above function 
     passwordLength: passwordLength,
     lowerCase: lowerCase,
     upperCase: upperCase,
@@ -114,16 +111,11 @@ function getPasswordOptions() {
   };
 };
 
-
-
 // Function for getting a random element from an array
 function getRandom(arr) {
   var randomArrayElement = Math.floor(Math.random() * arr.length);
   return arr[randomArrayElement];
 }
-
-// Storing generated password in this variable
-
 
 // Function using for loop to push randomly selected elements to be stored into (above) new array
 var options = getPasswordOptions();
@@ -146,14 +138,15 @@ function generatePassword() {
     if (options.specialCharactersInput) {
       var randomElement4 = getRandom(specialCharacters);
       GeneratedPassword.push(randomElement4);
-    } 
-     if (!options.lowerCase & !options.upperCase & !options.numerics & !options.specialCharactersInput) {
+    }
+    if (!options.lowerCase & !options.upperCase & !options.numerics & !options.specialCharactersInput) {
       return "You must pick at least one character type for a password to be generated."
-    } 
+    }
 
   } return GeneratedPassword.join('');
 }
-// Get references to the #generate element
+
+// Get references to the #generate element in HTML 
 var generateBtn = document.querySelector('#generate');
 
 // Write password to the #password input
@@ -166,8 +159,3 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener('click', writePassword);
-
-// I want to pick random elements from each array 
-// I want these elements to be put together into a new array 
-// I want this new array to be stored in a variable 
-// I want said variable to be displayed on the UI 
