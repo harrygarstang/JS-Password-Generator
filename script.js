@@ -101,29 +101,29 @@ function getPasswordOptions() {
     return alert("Password must be between 10 and 64 characters");
   }
   var lowerCase = confirm("Do you wish to include lowercase characters?");
-  if (lowerCase) { 
+  if (lowerCase) {
     console.log("User has opted to include lower case characters");
   } else {
-      console.log("User has opted NOT to include lower case characters");
-    }
-    var upperCase = confirm("Do you wish to include upper case characters?")
-    if (upperCase) {
-      console.log("User has opted to include upper case characters");
-    } else {
-      console.log("User has opted NOT to include upper case characters");
-    }
-    var numerics = confirm("Do you wish to include numerical characters?")
-    if (numerics) {
-      console.log("User has opted to include numerical characters");
-    } else {
-      console.log("User has opted NOT to include numerical characters");
-    }
-    var specialCharacters = confirm("Do you wish to include special characters?");
-    if (specialCharacters) {
-      console.log("User has opted to include special characters");
-    } else {
-      console.log("User has opted NOT to include special characters");
-    }
+    console.log("User has opted NOT to include lower case characters");
+  }
+  var upperCase = confirm("Do you wish to include upper case characters?")
+  if (upperCase) {
+    console.log("User has opted to include upper case characters");
+  } else {
+    console.log("User has opted NOT to include upper case characters");
+  }
+  var numerics = confirm("Do you wish to include numerical characters?")
+  if (numerics) {
+    console.log("User has opted to include numerical characters");
+  } else {
+    console.log("User has opted NOT to include numerical characters");
+  }
+  var specialCharactersInput = confirm("Do you wish to include special characters?");
+  if (specialCharactersInput) {
+    console.log("User has opted to include special characters");
+  } else {
+    console.log("User has opted NOT to include special characters");
+  }
 };
 
 
@@ -132,12 +132,16 @@ getPasswordOptions();
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  var randomArrayElement = Math.floor(Math.random() * arr.length);
+  return arr[randomArrayElement];
 }
 
 // Function to generate password with user input
 function generatePassword() {
-
+  getRandom(specialCharactersInput);
+  getRandom(lowerCasedCharacters);
+  getRandom(numericCharacters)
+  getRandom(upperCasedCharacters)
 }
 
 // Get references to the #generate element
