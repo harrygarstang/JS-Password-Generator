@@ -95,7 +95,7 @@ var upperCasedCharacters = [
 function getPasswordOptions() {
   var passwordLength = prompt("Please enter the desired length of password:");
   let num = Number(passwordLength);
-  if (num > 10 && num < 64) {
+  if (num >= 10 && num <= 64) {
     console.log("User has opted for a password length of: " + num);
   } else {
     return alert("Password must be between 10 and 64 characters");
@@ -136,14 +136,19 @@ function getRandom(arr) {
   return arr[randomArrayElement];
 }
 
-// Function to generate password with user input
-function generatePassword() {
-  getRandom(specialCharactersInput);
-  getRandom(lowerCasedCharacters);
-  getRandom(numericCharacters)
-  getRandom(upperCasedCharacters)
-}
+// Storing generated password in this variable
+var GeneratedPassword = [];
 
+// Function using for loop to push randomly selected elements to be stored into (above) new array
+function generatePassword() {
+  for (var i = 0; i < 3; i++) {
+    var randomElement1 = getRandom(specialCharacters);
+    var randomElement2 = getRandom(lowerCasedCharacters);
+    var randomElement3 = getRandom(numericCharacters)
+    var randomElement4 = getRandom(upperCasedCharacters)
+    GeneratedPassword.push(randomElement1, randomElement2, randomElement3, randomElement4);
+  }
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
 
