@@ -137,17 +137,19 @@ function getRandom(arr) {
 }
 
 // Storing generated password in this variable
-var GeneratedPassword = [];
+
 
 // Function using for loop to push randomly selected elements to be stored into (above) new array
 function generatePassword() {
+  var GeneratedPassword = [];
   for (var i = 0; i < 3; i++) {
     var randomElement1 = getRandom(specialCharacters);
     var randomElement2 = getRandom(lowerCasedCharacters);
     var randomElement3 = getRandom(numericCharacters)
     var randomElement4 = getRandom(upperCasedCharacters)
     GeneratedPassword.push(randomElement1, randomElement2, randomElement3, randomElement4);
-  }
+  } 
+  return GeneratedPassword;
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
