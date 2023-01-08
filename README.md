@@ -7,7 +7,7 @@ This project is a JavaScript password generator allowing a user to create a rand
 
 * Go to the website page, and respond to the prompts. 
 * Now click the 'Generate Password' button, and your password will appear tailored to your stated preferences. 
-* Link: 
+* Link: https://harrygarstang.github.io/JS-Password-Generator/
 
 Here is a screenshot of my project. 
 
