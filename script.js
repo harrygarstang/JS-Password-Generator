@@ -147,6 +147,9 @@ function generatePassword() {
       var randomElement4 = getRandom(specialCharacters);
       GeneratedPassword.push(randomElement4);
     } 
+     if (!options.lowerCase & !options.upperCase & !options.numerics & !options.specialCharactersInput) {
+      return "You must pick at least one character type for a password to be generated."
+    } 
 
   } return GeneratedPassword.join('');
 }
