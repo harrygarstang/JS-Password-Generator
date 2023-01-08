@@ -88,16 +88,19 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+// Password gen values 
+// var userInput = getUserInput.userInput;
 // Function to prompt user for password options
 function getPasswordOptions() {
 
 }
 
-function getUserInput () {
-  var userInput = prompt("Please enter your input:");
-  return userInput;
+function getUserInput() {
+  var passwordLength = prompt("Please enter your input:");
+  return console.log("User requested a password character length of: " + passwordLength);
 }
-
+// call function 
+getUserInput()
 // Function for getting a random element from an array
 function getRandom(arr) {
 
