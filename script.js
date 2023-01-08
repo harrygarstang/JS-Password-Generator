@@ -96,39 +96,25 @@ function getPasswordOptions() {
   var passwordLength = prompt("Please enter the desired length of password:");
   let num = Number(passwordLength);
   if (num >= 10 && num <= 64) {
-    console.log("User has opted for a password length of: " + num);
+    passwordLength = num
   } else {
     return alert("Password must be between 10 and 64 characters");
   }
   var lowerCase = confirm("Do you wish to include lowercase characters?");
-  if (lowerCase) {
-    console.log("User has opted to include lower case characters");
-  } else {
-    console.log("User has opted NOT to include lower case characters");
-  }
   var upperCase = confirm("Do you wish to include upper case characters?")
-  if (upperCase) {
-    console.log("User has opted to include upper case characters");
-  } else {
-    console.log("User has opted NOT to include upper case characters");
-  }
   var numerics = confirm("Do you wish to include numerical characters?")
-  if (numerics) {
-    console.log("User has opted to include numerical characters");
-  } else {
-    console.log("User has opted NOT to include numerical characters");
-  }
   var specialCharactersInput = confirm("Do you wish to include special characters?");
-  if (specialCharactersInput) {
-    console.log("User has opted to include special characters");
-  } else {
-    console.log("User has opted NOT to include special characters");
-  }
+
+  return {
+    passwordLength: passwordLength,
+    lowerCase: lowerCase,
+    upperCase: upperCase,
+    numerics: numerics,
+    specialCharactersInput: specialCharactersInput,
+  };
 };
 
 
-// call function 
-getPasswordOptions();
 
 // Function for getting a random element from an array
 function getRandom(arr) {
@@ -140,16 +126,29 @@ function getRandom(arr) {
 
 
 // Function using for loop to push randomly selected elements to be stored into (above) new array
+var options = getPasswordOptions();
+
 function generatePassword() {
   var GeneratedPassword = [];
-  for (var i = 0; i < 3; i++) {
-    var randomElement1 = getRandom(specialCharacters);
-    var randomElement2 = getRandom(lowerCasedCharacters);
-    var randomElement3 = getRandom(numericCharacters)
-    var randomElement4 = getRandom(upperCasedCharacters)
-    GeneratedPassword.push(randomElement1, randomElement2, randomElement3, randomElement4);
-  } 
-  return GeneratedPassword;
+  for (var i = 0; i < options.passwordLength; i++) {
+    if (options.lowerCase) {
+      var randomElement1 = getRandom(lowerCasedCharacters);
+      GeneratedPassword.push(randomElement1);
+    }
+    if (options.upperCase) {
+      var randomElement2 = getRandom(upperCasedCharacters);
+      GeneratedPassword.push(randomElement2);
+    }
+    if (options.numerics) {
+      var randomElement3 = getRandom(numericCharacters);
+      GeneratedPassword.push(randomElement3);
+    }
+    if (options.specialCharactersInput) {
+      var randomElement4 = getRandom(specialCharacters);
+      GeneratedPassword.push(randomElement4);
+    } 
+
+  } return GeneratedPassword.join('');
 }
 // Get references to the #generate element
 var generateBtn = document.querySelector('#generate');
