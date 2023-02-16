@@ -1,4 +1,4 @@
- Password Generator using Javascript (Bootcamp Challenge 5)
+ Password Generator using Javascript 
 
 ## Description 
 This project is a JavaScript password generator allowing a user to create a randomly-generated password based on specified options. The user can choose the length of the password and which types of characters to include (lowercase letters, uppercase letters, numbers, special characters). The program generates a password by combining random characters from the chosen character arrays. The generated password is intended to be used as a login password to increase security.
